@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NP</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Nathaniel Pulvinar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="website-logo.png" alt="Personal Website" title="NBP" type="image/x-icon"/>
+    <link rel="stylesheet" href="personal-website.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      .body{
+        background-color: #222222;
+        color: #f0f7ee;
+        font-family: 'Poppins', sans-serif;
+        margin: 1% 2.5% 0% 0%;   
+        cursor: pointer;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      a{
+        color: #f0f7ee;
+        text-decoration: none;
+      }
+
+      a:hover{
+        text-decoration: underline;
+        text-decoration-thickness: 4px; 
+        text-decoration-color:#F5B700;
+      }
+
+      .header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 5%;
+        background: #222;
+        font-size: 42%;
+        border-bottom: 4px solid #333;
+        padding: 15px 0;
+        z-index: 100;
+      }
+
+      .logo-png{
+        width: 6%;
+        padding-right: 12%;
+        margin-left: 4%;
+      }
+
+      .logo, .header {
+        display: flex;
+        vertical-align: center;
+        align-items: center;
+      }
+
+      .header-contents{
+        display: flex;
+
+      }
+
+      .home-font, .about-font, .skills-font, .projects-font, .contact-me-font{
+        font-size: 20px;
+        padding: 0px 58px 0px 58px;
+        justify-content: center;
+      }
+
+      .home{
+        display: flex;
+        padding-bottom: 190px;
+      }
+
+      .home-one{
+        background-color: 222222;
+        display: block;
+        padding-left: 60px;
+        padding-top: 80px;
+      }
+
+      .google-png, .linkedin-png, .github-png{
+        width: 3%;
+        padding-right: 3%
+      }
+
+      .about-me-png{
+        width: 90%;
+        padding: 10% 0px 20% 5%;
+      }
+
+      .hello-txt{
+        padding-top: 5%;
+        font-size: 120%;
+        margin-bottom: -15px;
+      }
+
+      .name-txt, .about-txt, .skills-txt, .projects-txt, .contact-me-txt{
+        font-size: 550%;
+        margin-top: 0%;
+        margin-bottom: -5%;
+        color: #F5B700;
+        padding-top: 20px;
+        font-weight: bold;
+      }
+
+      .name-txt{
+        margin-left: -0.5%;
+        font-size: 120px;
+        padding-top: 6px;
+      }
+
+      .computer-engineering-txt{
+        font-size: 180%;
+      }
+
+      .hello-txt, .name-txt, .computer-engineering-txt{
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .hello-txt, .name-txt{
+        animation: typing-animation 3s steps(20, end) 1;
+      }
+
+      .computer-engineering-txt{
+        animation: typing-animation 12s steps(20, end) 1;
+      }
+
+      @keyframes typing-animation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+      }
+
+      
+      .about {
+      display: flex;
+      margin-left: 5%;
+      padding: 150px 0 60px;
+      }
+
+      .about-one {
+      flex: 1;
+      }
+
+      .about-two {
+      flex: 2;
+      margin-left: 20px; 
+      }
+
+      .about-me2-png{
+        width: 100%;
+        border-radius: 40px;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .about-me2-png:hover{
+        transform: scale(1.06);
+      }
+
+      .about-txt{
+        padding-bottom: 2%;
+        padding-left: 5%;
+      }
+
+      .about-me-txt{
+        padding-left: 5%;
+        padding-top: 2%;
+        width: 75%;
+        font-size: 18px;
+      }
+
+      .skills-container{
+        padding-top: 5%; 
+      }
+
+      .skills{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 4%;
+        padding-bottom: 5%;
+      }
+
+      .skills-txt{
+        margin-bottom: 0%;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+
+      .skill-one, .skill-two, .skill-three{
+        flex: 1;
+        border-radius: 22px;
+        margin: 2% 2% 0 4%;
+        padding: 2% 0;
+        background-color: #333333;
+        color: #222222;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .skill-one:hover, .skill-two:hover, .skill-three:hover,
+      .projects-one:hover, .projects-two:hover, .projects-three:hover{
+        transform: scale(1.05);
+        background-color: #3D3D3D;
+      }
+      .skill-one {
+        margin-left: 0%;
+      }
+
+      .skill-one-img, .skill-two-img, .skill-three-img{
+        padding-top: 20px;
+        width: 30%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .skill-one-img:hover, .skill-two-img:hover, .skill-three-img:hover{
+        transform: scale(1.03)
+      }
+
+      .skill-description, .skill-title{
+        color:#f0f7ee;
+        font-size: 400%;
+      }
+
+      .skill-title{
+        font-size: 20px;
+        font-weight: bold;
+        color:#F5B700;
+      }
+
+      .skill-description{
+        font-size: 18px;
+      }
+
+      .projects{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 4%;
+        margin-right: 4%;
+        padding-top: 3%; 
+      }
+
+      .projects-txt{        
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 60px;
+      }
+
+      .projects-one, .projects-two, .projects-three{
+        flex: 1;
+      }
+
+      .projects-one, .projects-two, .projects-three{
+        border-radius: 22px;
+        margin-right: 2%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        background-color: #333333;
+        color: #222222;
+      }
+
+      .projects-one, .projects-two, .projects-three {
+        margin-left: 0%;
+        position: relative;
+      }
+
+      .content-one, .content-two, .content-three{
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        background-color: #F5F5F5;
+        color: #222222;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+      }
+
+      .projects-one:hover .content-one,
+      .projects-two:hover .content-two,
+      .projects-three:hover .content-three {
+        opacity: 0.80;
+      }
+
+      .projects-one-img, .projects-two-img, .projects-three-img{
+        width: 30%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+      }
+
+      .projects-description, .projects-title{
+        color:#f0f7ee;
+      }
+
+      .projects-title{
+        font-size: 20px;
+        font-weight: bold;
+        color:#F5B700;
+      }
+
+      .projects-description{
+        font-size: 14px;
+      }
+
+      .contact-me{
+        height: 100%;
+        background-color: #222222;
+        display: block;
+        
+      }
+
+      .contact-me-txt{
+        padding-bottom: 40px;
+      }
+
+      .submit{
+        color: #333333;
+        width: 150px;
+        outline: none;
+        border: none;
+      }
+
+      .message{
+        width: 600px;
+      }
+
+      .contact-div{
+
+        display: block;
+        text-align: center;
+        align-content: center;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .contact-me-txt{
+        margin-top: 0;
+        font-size: 90px;
+        text-align: center;
+        padding-bottom: 70px;
+      }
+
+      .contact-txt{
+        font-size: medium;
+        margin: 0;
+      }
+
+      .name-lbl, .email-lbl, .phone-lbl, .subject-lbl, .message-lbl{
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 16px;
+      }
+
+      .name-input, .email-input, .phone-input, .subject-input, .message-input{
+        display: block;
+        text-align: center;
+        align-content: center;
+        height: 45px;
+        width: 40%;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+
+      .message-input{
+        height: 45px;
+      }
+
+      .submit-button{
+        display: block;
+        text-align: center;
+        align-content: center;
+        margin: 0 auto;
+        height: 50px;
+        width: 200px;
+        font-family: 'Poppins', sans-serif;
+        background-color: #ffd147;
+        outline: none;
+        border-radius: 20px;
+      }
+
+      input, textarea{
+        display: block; 
+        margin: 0 auto; 
+        text-align: center;
+      }
+
+      .button-container{
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+
+      .download-button, .hire-button{
+        background-color: white;
+        color:#222222;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 25px;
+        display: flex;
+        width: 12%;
+        border: solid 4px #F5B700;
+        text-decoration: none;
+        color: #222222;
+        display: inline-flex;
+        float: left;
+        text-align: center;
+        white-space: nowrap; 
+      }
+
+      .download-container{
+          padding-top: 30px;
+          margin-right: 20px;
+      }
+
+      .hire-button{
+          display: inline-block;
+          margin-left: 20px;
+      } 
+
+      .download-button:hover, .hire-button:hover, .submit-button:hover{
+        background-color: #F5B700;
+        color:#f0f7ee;
+        font-weight: bold;
+      }
+
+      .about-me-txt span, .skill-description span{
+        color: #FFD65C;
+      }
+
+      .projects-txts{
+        padding-top: 30px;
+      }
+
+
+
+    </style>
+  </head>
+
+  <body class="body">
+    <div>
+
+      <!-- Header -->
+      <div class="header"> 
+        <img class="logo-png" src="logo.png" alt="NBP Logo">
+
+        <a href="#home" class="home-font">Home</a>
+        <a href="#about" class="about-font">About</a>
+        <a href="#skills-txt" class="skills-font">Skills</a>
+        <a href="#projects-txts" class="projects-font">Projects</a>
+        <a href="#contact-me" class="contact-me-font">Contact Me</a>
+ 
+      </div>
+
+      <!-- Home -->
+      <div class="home" id="home">
+        <div class="home-one">
+          <p class="hello-txt">I am</p>
+          <h1 class="name-txt">Nathaniel Pulvinar</h1> 
+          <p class="computer-engineering-txt">a Computer Engineering Student</p>
+            <a href="https://www.facebook.com/profile.php?id=100049132129712" target="_blank">
+              <img class="google-png" src="icons-website\facebook.png" alt="google-png"> 
+            </a>
+            <a href="https://www.linkedin.com/in/nathaniel-pulvinar-435a6b233/" target="_blank">
+              <img class="linkedin-png" src="icons-website\linkedin.png" alt="linkedin-png">
+            </a>
+            <a href="https://github.com/nathanielpulvinar0909" target="_blank">
+              <img class="github-png" src="icons-website\github.png" alt="github-png">
+            </a>
+            <div class="download-container">
+              <a class="download-button" href="Pulvinar_Nathaniel Resume (6).pdf" download="Pulvinar_Resume" target="_blank">Download Resume</a> 
+              <a class="hire-button" href="#contact-me">Hire me</a> 
+            </div>
+            <div>
+            </div>
+            <div>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <!-- About -->
+      <div class="about" id="about">
+        <div class="about-one">
+          <img class="about-me2-png" src="my-picture.png" alt="my-picture-png">
+        </div>
+      
+        <div class="about-two">
+          <h1 class="about-txt">About Me</h1> 
+          <p class="about-me-txt">I am an <span>experienced computer engineering student</span> who constantly strives in creating functions, resolving issues, and managing software designs. Given my <span>four years exposure in the industry</span>, I have gained sufficient knowledge and all-around expertise that solely specialises in fulfilling all of the client’s demands. I have built, modified, and transformed many projects and services.</p>
+          <p class="about-me-txt"><span><strong>Experienced, competent,</strong></span> and <span><strong>capable.</strong></span> I’m looking forward to working with you.
+          </p>
+        </div>
+      </div> 
+      </div>
+
+      </div>
+
+      <!-- Skills -->
+      <div id="skills-txt" class="skills-container">
+        <p class="skills-txt">Skills</p>
+        <div class="skills">
+          <div class="skill-one">
+            
+            <img class=skill-one-img src="icons-website\backend-programming.png" alt="structure-and-development-png">
+            <p class="skill-title">Structure and Development</p>
+            <p class="skill-description">Adept in <span>managing software development progress from planning to execution.</span>
+              I have organized systems and systematized algorithms.</p>
+          </div>
+          <div class="skill-two">
+            <img class=skill-two-img src="icons-website\machine-learning.png" alt="structure-and-development-png">
+            <p class="skill-title">Machine Learning</p>
+            <p class="skill-description">
+              Capable of <span>recognizing and developing techniques that permitting machines to learn.</span> 
+              Acquired exposure in a wide variety of hardware and AI designs.
+            </p>
+          </div>
+          <div class="skill-three">
+            <img class=skill-three-img src="icons-website\data-development.png" alt="structure-and-development-png">
+            <p class="skill-title">Backend Programming</p>
+            <p class="skill-description">Proficient in Python and C#. 
+              Has a strong logical and problem solving skill ensuring quality solutions. <span>Diagnosed systems and debugging.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Projects -->
+      <div id="projects-txts" class="projects-txts">
+        <p class="projects-txt">Recent Projects</p>
+        <div class="projects">
+          <div class="projects-one">
+            <a href="https://github.com/nathanielpulvinar0909/Tic-Tac-Toe-using-C-Sharp" target="_blank">
+              <img class=projects-one-img src="icons-website\tic-tac-toe.png" alt="structure-and-development-png">
+            </a>
+            <div class="content-one">
+              <p class="">Tic Tac Toe </p>
+            </div>
+          </div>
+
+          <div class="projects-two">
+            <a href="https://github.com/nathanielpulvinar0909/PNR-Contact-Tracing-Form" target="_blank">
+              <img class=projects-two-img src="icons-website\contact-tracing.png" alt="structure-and-development-png">
+            </a>
+            <div class="content-two">
+              <p class="">Contact Tracing </p>
+            </div>
+          </div>
+          <div class="projects-three">
+            <a href="https://github.com/nathanielpulvinar0909/Assignment-5" target="_blank">
+              <img class=projects-three-img src="icons-website\qr-code.png" alt="structure-and-development-png">
+            </a>
+            <div class="content-three">
+              <p class="">QR Code Generator </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects">
+          <div class="projects-one">
+            <a href="https://github.com/nathanielpulvinar0909/Resume-Generator-to-PDF" target="_blank">
+              <img class=projects-one-img src="icons-website\resume.png" alt="structure-and-development-png">
+            </a>  
+            <div class="content-one">
+              <p class="">Resumer Generator </p>
+            </div>
+          </div>
+          <div class="projects-two">
+            <a href="https://github.com/nathanielpulvinar0909/Infix_to_Postfix" target="_blank">
+              <img class=projects-two-img src="icons-website\sorting-method.png" alt="structure-and-development-png">
+            </a>
+            <div class="content-two">
+              <p class="">Infix to Postfix</p>
+            </div>  
+          </div>
+          <div class="projects-three">
+            <a href="https://github.com/nathanielpulvinar0909/Stacks" target="_blank">
+              <img class=projects-three-img src="icons-website\stacks.png" alt="structure-and-development-png">
+            </a> 
+            <div class="content-three">
+              <p class="">Stacks</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Me -->
+      <div id="contact-me" class="contact-me">
+        <div>
+          <p class="contact-me-txt">Contact Me</p>
+        </div>
+      <div class="contacts-container">
+        <div class="contact-div">
+          <form action="https://formspree.io/f/xzbqoded" method="POST">
+            <label class="name-lbl">
+              Name
+              <input class=name-input type="name" name="name" placeholder="Enter your name" required>
+            </label>
+            <label class=phone-lbl>
+              Phone Number 
+              <input class="phone-input" type="tel" id="phone" name="phone" pattern="\d{11}" maxlength="11" minlength="11" placeholder="Enter 11-digit number" required>
+            </label>
+            <label class="email-lbl">
+              Email Address
+              <input class=email-input type="email" name="email" placeholder="Enter valid email address" required>
+            </label>
+            <label for="email-subject" class="subject-lbl">Subject</label>
+            <input class=subject-input type="text" id="email-subject" name="email-subject" placeholder="Enter email's subject" required>
+            <label class="message-lbl">
+              Your message
+              <textarea class="message-input" name="message" placeholder="Enter your message" required></textarea>
+            </label>
+            <div class="button-container">
+              <button class=submit-button type="submit">Send</button>
+            </div>
+
+        </form>
+        </div>
+          
+            
+        </div>
+      </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
